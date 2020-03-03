@@ -1,0 +1,32 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Car Index{% endblock %}
+
+{% block style %}
+<style>
+</style>
+{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Hello, i am list of cars</h1>
+
+    Options:
+    <a href="{{ '/car/new' }}">new</a>
+    
+    {% for car in pagination %} 
+    <div class="car-presents">
+        <a href="/car/edit/{{ car.id }}">{{ car.name }} </a>
+        <p> {{ car.description }} </p>
+        <p> {{ car.price       }} </p>
+    </div> 
+    {% endfor %} 
+
+    <div class="navigation"> 
+    {{ knp_pagination_render(pagination) }} 
+    </div> 
+    
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% for alert in app.flashes('success') %}
+    {% include 'alert.html.twig' with {'alert_class': 'success','alert':alert } only %}
+{% endfor %}
+
+{% for alert in app.flashes('error') %}
+    <div class="alert alert-error">
+        {{ alert }}
+    </div>
+{% endfor %}
+{% for alert in app.flashes('warning') %}
+    <div class="alert alert-warning">
+        {{ alert }}
+    </div>
+{% endfor %}
+

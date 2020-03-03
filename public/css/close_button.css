@@ -1,0 +1,16 @@
+.close_button {
+    display: block;
+    cursor: pointer;
+    padding: 2px 8px;
+    border: 1px solid #018dc4;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal normal bold 20px/normal Tahoma, Geneva, sans-serif;
+    color: rgba(255,255,255,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #ff0002;
+    float: right;
+    margin-top:-12px;
+    margin-right:-12px;
+}  
